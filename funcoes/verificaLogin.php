@@ -11,6 +11,7 @@ require_once('../config/conexao.php');
     $usuario = $pdo->query($sql)->fetch();
 
     if(!empty(password_verify($senha, $usuario['senha']))){
+        $_SESSION['usuario_id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
         $_SESSION['avatar'] = $usuario['avatar'];
         $_SESSION['isLogged'] = true;
