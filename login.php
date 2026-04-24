@@ -21,9 +21,9 @@ if (isset($_SESSION['isLogged'])) {
   <div class="container flex flex-col justify-content-center align-items-center">
     <form style="width: 250px;" class="d-flex flex-column" action="funcoes/verificaLogin.php" method="post">
       <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" placeholder="Informe seu e-mail">
+      <input required type="email" name="email" id="email" placeholder="Informe seu e-mail">
       <label for="senha">Senha</label>
-      <input type="password" name="senha" id="senha" placeholder="Informe sua senha">
+      <input required type="password" name="senha" id="senha" placeholder="Informe sua senha">
       <button class="btn btn-outline-primary mt-2" type="submit">Entrar</button>
     </form>
     <span>Crie sua conta <a href="./pages/cadastro.php">Clique aqui</a></span>

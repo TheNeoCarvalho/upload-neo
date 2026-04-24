@@ -12,10 +12,9 @@ require_once('../config/conexao.php');
 
     if(!empty(password_verify($senha, $usuario['senha']))){
         $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['avatar'] = $usuario['avatar'];
         $_SESSION['isLogged'] = true;
         header('location: ../pages/home.php');
     }else{
         echo "Erro: Usuário/Senha incorretos";
     }
-
-?>
